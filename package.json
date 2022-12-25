@@ -1,6 +1,5 @@
 {
-  "name": "feedback",
-  "homepage": "https://Devanshu171.github.io/TextUtils",
+  "name": "textutils",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

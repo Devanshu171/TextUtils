@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-export default function About() {
+export default function About(props) {
+  console.log(props.mode);
+  let myStyle = {
+    color: props.mode === "dark" ? "white" : "#333",
+    backgroundColor: props.mode === "dark" ? "#333" : "white",
+  };
   return (
     <div className="container">
       <h2>About Us</h2>
@@ -23,7 +28,7 @@ export default function About() {
             className="accordion-collapse collapse show"
             aria-labelledby="panelsStayOpen-headingOne"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle}>
               <strong>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Maiores nam quam sapiente odio ab optio voluptatem saepe eos
@@ -52,7 +57,7 @@ export default function About() {
             className="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingTwo"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle}>
               <strong>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Deserunt, eaque minus reprehenderit ut, excepturi dolores
@@ -81,7 +86,7 @@ export default function About() {
             className="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingThree"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={myStyle}>
               <strong>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
                 unde enim rem! Facere, iusto. Aliquid odio minima qui ipsa
